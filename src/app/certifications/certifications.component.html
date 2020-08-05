@@ -1,0 +1,105 @@
+<div class="sect-pt3 nav-top">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                  {{ 'certificationlang.title' | translate }}
+              </h3>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="box-shadow-full">
+      <table class="table table-hover table-responsive">
+          <thead>
+            <tr>
+              <th class="text-center cer-table-column-sl">#</th>
+              <th class="text-center cer-table-column-month">{{ 'certificationlang.certification-code' | translate }}</th>
+              <th class="text-center cer-table-column-title">{{ 'certificationlang.certification-name' | translate }}</th>
+              <th class="text-center cer-table-column-month">{{ 'certificationlang.certification-type' | translate }}</th>
+              <th class="text-center cer-table-column-month">{{ 'certificationlang.certification-month' | translate }}</th>
+            </tr>
+          </thead> 
+          <tbody>
+              <tr class="cursor-pointer" *ngFor = 'let cd of certifications' (click)="openCertificationModel(certificationModel, cd)">
+                <th scope="row"  class="text-center">{{cd.CertificationId}}</th>
+                <td  class="text-center">{{cd.CertificationCode}}</td>
+                <td  class="text-left td-link">{{cd.CertificationName}}</td>
+                <td  class="text-center">{{cd.CertificationType}}</td>
+                <td  class="text-center">{{cd.CertificationMonth}}</td>
+              </tr>
+            </tbody>   
+      </table>
+      <div class="d-flex justify-content-between p-2">
+          <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="pageSize">
+          </ngb-pagination>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<ngb-carousel interval="3500" [pauseOnHover]="false" [showNavigationArrows] = "false">
+  <ng-template ngbSlide *ngFor = 'let cd of certificationDetails'>
+    <div class="testimonials paralax-mf bg-image" [ngStyle]="{'background-image': 'url(' + ceritificationBackgroundImg + ')'}">
+  <div class="overlay-mf"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="testimonial-mf" class="owl-carousel owl-theme">
+          <div class="testimonial-box">
+            <div class="author-test">
+              <img [src]="cd.CertificationImageUrl" alt="" class="rounded-circle b-shadow-a">
+              <span class="author">{{cd.CertificationCode}} - {{cd.CertificationName}}</span>
+            </div>
+            <div class="content-test">
+              <p class="description lead">
+                {{cd.CertificationMonth}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>
+</ngb-carousel>
+
+<ng-template #certificationModel let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title project-model">{{modelCertificationDetails.CertificationName}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="form-group">
+          <strong>{{ 'certificationlang.certification-code' | translate }} : </strong>
+          {{modelCertificationDetails.CertificationCode}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'certificationlang.certification-name' | translate }} :</strong>
+          {{modelCertificationDetails.CertificationName}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'certificationlang.certification-type' | translate }} :</strong>
+           {{modelCertificationDetails.CertificationType}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'certificationlang.certification-month' | translate }} :</strong>
+           {{modelCertificationDetails.CertificationMonth}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'certificationlang.certification-url' | translate }} :</strong>
+           <a href="{{modelCertificationDetails.CertificationUrl}}" target="_blank"><i> View Certification</i></a>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

@@ -1,0 +1,72 @@
+<div class="sect-pt3 nav-top">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <div class="title-box text-center">
+                <h3 class="title-a">
+                   {{ 'technologieslang.title' | translate }}
+                </h3>
+                <div class="line-mf"></div>
+             </div>
+          </div>
+          <div class="col text-right">
+             <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>{{ selectedValue}}</button>
+                <div ngbDropdownMenu>
+                   <button (click) = 'loadAllDetails()' ngbDropdownItem>{{ 'technologieslang.all' | translate }}</button>
+                   <button (click) = 'loadFrameWorkDetails()' ngbDropdownItem>{{ 'technologieslang.frameworks' | translate }}</button>
+                   <button (click) = 'loadScriptingDetails()' ngbDropdownItem>{{ 'technologieslang.scripting' | translate }}</button>
+                   <button (click) = 'loadDatabaseDetails()' ngbDropdownItem>{{ 'technologieslang.database' | translate }}</button>
+                   <button (click) = 'loadDevopsDetails()' ngbDropdownItem>{{ 'technologieslang.devops' | translate }}</button>
+                   <button (click) = 'loadBuildDetails()' ngbDropdownItem>{{ 'technologieslang.build' | translate }}</button>
+                </div>
+             </div>
+          </div>
+          <div class="project-space"></div>
+       </div>
+       <div class="row">
+          <div class="col-md-4" *ngFor='let td of tempTechnologiesDetails'>
+             <div class="work-box">
+                <a data-lightbox="gallery-mf">
+                   <div class="work-img">
+                      <img [src]="td.TechnologyImageUrl" [alt]="td.TechnologyTitle" class="img-fluid">
+                   </div>
+                   <div class="work-content">
+                      <div class="row">
+                         <div class="col-sm-8">
+                            <h2 class="w-title">{{td.TechnologyTitle}}</h2>
+                            <ngb-rating class="rating-style" [(rate)]="td.TechnologyPercentage"></ngb-rating>
+                         </div>
+                      </div>
+                   </div>
+                </a>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <ngb-carousel interval="4000" [pauseOnHover]="false" [showNavigationArrows]="false">
+ <ng-template ngbSlide *ngFor='let td of quotesDetails'>
+    <div class="testimonials paralax-mf bg-image" [ngStyle]="{'background-image': 'url(' + techBackgroundImg + ')'}">
+       <div class="overlay-mf"></div>
+       <div class="container">
+          <div class="row">
+             <div class="col-md-12">
+                <div id="testimonial-mf" class="owl-carousel owl-theme">
+                   <div class="testimonial-box">
+                      <div class="content-test">
+                         <p class="description lead">
+                            {{td.TechnologyQuotes}}
+                         </p>
+                      </div>
+                      <div class="author-test">
+                         <span class="author">{{td.TechnologyAuthor}}</span>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </ng-template>
+ </ngb-carousel>

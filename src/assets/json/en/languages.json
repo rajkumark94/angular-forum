@@ -1,0 +1,23 @@
+[
+   {
+      "Title":"Tamil",
+      "Level":"Native or bilingual proficiency",
+      "SpeakingPercentage":"100",
+      "WritingPercentage":"100",
+      "ReadingPercentage":"100"
+   },
+   {
+      "Title":"English",
+      "Level":"Full professional proficiency",
+      "SpeakingPercentage":"60",
+      "WritingPercentage":"80",
+      "ReadingPercentage":"60"
+   },
+   {
+      "Title":"Japanese",
+      "Level":"Limited professional proficiency",
+      "SpeakingPercentage":"40",
+      "WritingPercentage":"30",
+      "ReadingPercentage":"30"
+   }
+]

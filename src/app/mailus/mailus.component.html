@@ -1,0 +1,74 @@
+<div class="paralax-mf footer-paralax bg-image route" style="background-image: url(assets/images/mailus/img_1.jpg)">
+  <div class="overlay-mf"></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="contact-mf">
+                  <div id="contact" class="box-shadow-full">
+                      <div class="row">
+                          <div class="col-md-10">
+                              <div class="title-box-2">
+                                  <h5 class="title-left">
+                                      {{ 'mailuslang.title' | translate}}
+                                  </h5>
+                              </div>
+                              <div>
+                                  <form [formGroup]="mailusForm" (ngSubmit)="onSubmit()">
+                                      <div class="row">
+                                          <div class="col-md-12 mb-3">
+                                              <div class="form-group">
+                                                  <label>{{ 'mailuslang.name' | translate }}</label><span class="required">*</span>
+                                                  <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.name.errors }" />
+                                                  <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
+                                                      <div *ngIf="form.name.errors.required">{{ 'mailuslang.name-validation' | translate }}</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-12 mb-3">
+                                              <div class="form-group">
+                                                  <label>{{ 'mailuslang.email' | translate }}</label><span class="required">*</span>
+                                                  <input formControlName="email" type="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.email.errors }" />
+                                                  <div *ngIf="submitted && form.email.errors" class="invalid-feedback">
+                                                      <div *ngIf="form.email.errors.required">{{ 'mailuslang.email-validation-1' | translate }}</div>
+                                                      <div *ngIf="form.email.errors.email">{{ 'mailuslang.email-validation-2' | translate }}</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-12 mb-3">
+                                              <div class="form-group">
+                                                  <label>{{ 'mailuslang.message' | translate }}</label><span class="required">*</span>
+                                                  <textarea formControlName="message" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.message.errors }"></textarea>
+                                                  <div *ngIf="submitted && form.message.errors" class="invalid-feedback">
+                                                      <div *ngIf="form.message.errors.required">{{ 'mailuslang.message-validation' | translate }}</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-12">
+                                              <button class="button button-a button-big button-rouded" [disabled]="buttonFlag">{{ 'mailuslang.send' | translate}}</button>
+                                              <span *ngIf="buttonFlag" class="mail-model-loader"><i class="fa fa-circle-o-notch mail-model-loader"></i> Now Loading</span>
+                                            </div>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<ng-template #mailusModel let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title project-model"><i class="fa fa-check" aria-hidden="true"></i> {{ 'mailuslang.model-title' | translate}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            {{ 'mailuslang.model-desc' | translate}}
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button"  class="btn btn-light visitor-close" (click)="modal.close('Close click')">Close</button>
+   </div>
+  </ng-template>

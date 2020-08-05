@@ -1,0 +1,109 @@
+<div class="sect-pt3 nav-top">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="title-box text-center">
+                  <h3 class="title-a">
+                      {{ 'projectlang.title' | translate }}
+                  </h3>
+                  <div class="line-mf"></div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <div class="box-shadow-full">
+                  <table class="table table-hover table-responsive">
+                      <thead>
+                          <tr>
+                              <th class="text-center table-column-sl">#</th>
+                              <th class="text-left table-column-title">{{ 'projectlang.project-title' | translate }}</th>
+                              <th class="text-center table-column-month">{{ 'projectlang.startmonth' | translate }}</th>
+                              <th class="text-center table-column-month">{{ 'projectlang.endmonth' | translate }}</th>
+                              <th class="text-center table-column-month">{{ 'projectlang.status' | translate }}</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="cursor-pointer" *ngFor='let pd of projects' (click)="openProjectModel(projectModel, pd)">
+                              <th scope="row" class="text-center">{{pd.ProjectID}}</th>
+                              <td class="text-left td-link">{{pd.ProjectTitle}}</td>
+                              <td class="text-center">{{pd.ProjectStartMonth}}</td>
+                              <td class="text-center">{{pd.ProjectEndMonth}}</td>
+                              <td class="text-center">{{pd.ProjectStatus}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div class="d-flex justify-content-between p-2">
+                      <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="pageSize">
+                      </ngb-pagination>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<ngb-carousel interval="4000" [pauseOnHover]="false" [showNavigationArrows]="false">
+  <ng-template ngbSlide *ngFor='let pd of projectDetails'>
+      <div class="testimonials paralax-mf bg-image" [ngStyle]="{'background-image': 'url(' + projectBackgroundImg + ')'}">
+          <div class="overlay-mf"></div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div id="testimonial-mf" class="owl-carousel owl-theme">
+                          <div class="testimonial-box">
+                              <div class="author-test">
+                                  <img [src]="pd.ProjectImageUrl" alt="" class="rounded-circle b-shadow-a">
+                                  <span class="author">{{pd.ProjectClient}}</span>
+                              </div>
+                              <div class="content-test">
+                                  <p class="description lead">
+                                      {{pd.ProjectDesc}}
+                                  </p>
+                                  <span class="comit"><i class="fa fa-quote-right"></i></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</ngb-carousel>
+
+<ng-template #projectModel let-modal>
+  <div class="modal-header">
+      <img [src]="modelProjectDetails.ProjectImageUrl" alt="Client Image" class="img-responsive img-circle " width="64px" height="64px" />
+      <span>&nbsp;&nbsp;</span>
+      <h4 class="modal-title project-model">{{modelProjectDetails.ProjectTitle}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="form-group">
+          <strong>{{ 'projectlang.project-client' | translate }}</strong> {{modelProjectDetails.ProjectClient}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'projectlang.projectstartmonth' | translate }}</strong> {{modelProjectDetails.ProjectStartMonth}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'projectlang.projectendmonth' | translate }}</strong> {{modelProjectDetails.ProjectEndMonth}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'projectlang.projectrole' | translate }}</strong> {{modelProjectDetails.ProjectRole}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'projectlang.projectdescription' | translate }}</strong> {{modelProjectDetails.ProjectDesc}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'projectlang.projecttechnologies' | translate }}</strong> {{modelProjectDetails.ProjectTechnologies}}
+      </div>
+      <div class="form-group">
+          <strong>{{ 'projectlang.projectstatus' | translate }}</strong> {{modelProjectDetails.ProjectStatus}}
+      </div>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

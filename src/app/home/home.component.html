@@ -1,0 +1,187 @@
+<app-banner></app-banner>
+<div class="about-mf sect-pt4">
+   <div class="container" *ngFor = 'let pd of personalDetails'>
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="box-shadow-full">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                           <div class="about-img">
+                              <img [src]="pd.ImageUrl" class="img-fluid rounded b-shadow-a" [alt]="pd.Name">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 col-md-9">
+                        <p><span class="about-info">{{pd.Role}}</span></p>
+                        <a href="mailto:{{pd.Email}}" target="_blank"><i class="fa fa-3x fa-envelope-square social"></i></a>
+                        <span>&nbsp;&nbsp;</span>
+                        <a href="{{pd.LinkedIn}}" target="_blank"><i class="fa fa-3x fa-linkedin-square social"></i></a>
+                        <span>&nbsp;&nbsp;</span>
+                        <a href="{{pd.FaceBook}}" target="_blank"><i class="fa fa-3x fa-facebook-square social"></i></a>
+                        <span>&nbsp;&nbsp;</span>
+                        <a href="{{pd.Twitter}}" target="_blank"><i class="fa fa-3x fa-twitter-square social"></i></a>
+                        <span>&nbsp;&nbsp;</span>
+                        <a href="{{pd.Instagram}}" target="_blank"><i class="fa fa-3x fa-instagram instagram social"></i></a>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="about-me pt-4 pt-md-0">
+                        <div class="title-box-2">
+                           <h5 class="title-left">
+                              {{'aboutlang.about' | translate }} {{pd.Name}}
+                           </h5>
+                        </div>
+                        <p class="lead">{{pd.Description}}</p>
+                     </div>
+                     <a href="{{pd.resumeUrl}}" target="_blank">
+                     <button class="button button-a">{{'aboutlang.viewcv' | translate }}</button></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ </div>
+ <ngb-carousel interval="3000" [pauseOnHover]="false" [showNavigationArrows] = "false">
+ <ng-template ngbSlide *ngFor = 'let ld of languageDetails'>
+   <div class="paralax-mf bg-image" [ngStyle]="{'background-image': 'url(' + langBackgroundImg + ')'}">
+      <div class="overlay-mf"></div>
+      <div class="container">
+         <div class="col-sm-3 col-lg-12">
+            <h2 class="counter-num lang-title"> {{ld.Title}}</h2>
+         </div>
+         <div class="col-sm-3 col-lg-12">
+            <h2 class="counter-num lang-sub-title"> {{ld.Level}}</h2>
+         </div>
+         <div class="row">
+            <div class="col-sm-3 col-lg-4">
+               <div class="counter-box">
+                  <div class="counter-ico">
+                     <span class="ico-circle"><i class="fa fa-microphone"></i></span>
+                  </div>
+                  <div class="counter-num">
+                     <p class="counter">{{ld.SpeakingPercentage}} %</p>
+                     <span class="counter-text">{{ 'generallang.speaking-tite' | translate }}</span>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-3 col-lg-4">
+               <div class="counter-box">
+                  <div class="counter-ico">
+                     <span class="ico-circle"><i class="fa fa-pencil"></i></span>
+                  </div>
+                  <div class="counter-num">
+                     <p class="counter">{{ld.WritingPercentage}} %</p>
+                     <span class="counter-text">{{ 'generallang.writing-tite' | translate }}</span>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-3 col-lg-4">
+               <div class="counter-box">
+                  <div class="counter-ico">
+                     <span class="ico-circle"><i class="fa fa-book"></i></span>
+                  </div>
+                  <div class="counter-num">
+                     <p class="counter">{{ld.ReadingPercentage}} %</p>
+                     <span class="counter-text">{{ 'generallang.reading-tite' | translate }}</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ </ng-template>
+ </ngb-carousel>
+ <div id="service" class="services-mf sect-pt3 route">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="title-box text-center">
+               <h3 class="title-a">
+                  {{'educationlang.title' | translate}}
+               </h3>
+               <p class="subtitle-a">
+                  {{'educationlang.sub-title' | translate}}
+               </p>
+               <div class="line-mf"></div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4">
+            <div class="service-box">
+               <div class="service-ico">
+                  <span class="ico-circle"><i class="ion-ios-book"></i></span>
+               </div>
+               <div class="service-content">
+                  <h2 class="s-title"> {{'educationlang.sslc-title' | translate}}</h2>
+                  <i class="fa fa-percent education-icons" placement="top" ngbTooltip="Percentage" aria-hidden="true"></i><span>{{'educationlang.sslc-percenatge' | translate}}</span>
+                  <br><br>
+                  <i class="fa fa-calendar education-icons" placement="top" ngbTooltip="Year" aria-hidden="true"></i><span>{{'educationlang.sslc-year' | translate}}</span>
+                  <br><br>
+                  <i class="fa fa-university education-icons" placement="top" ngbTooltip="School Name" aria-hidden="true"></i><span>{{'educationlang.sslc-school' | translate}}</span>
+                  <br><br>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="service-box">
+               <div class="service-ico">
+                  <span class="ico-circle"><i class="ion-ios-book-outline"></i></span>
+               </div>
+               <div class="service-content">
+                  <h2 class="s-title"> {{'educationlang.hsc-title' | translate}}</h2>
+                  <i class="fa fa-percent education-icons" placement="top" ngbTooltip="Percentage" aria-hidden="true"></i><span>{{'educationlang.hsc-percenatge' | translate}}</span>
+                  <br><br>
+                  <i class="fa fa-calendar education-icons" placement="top" ngbTooltip="Year" aria-hidden="true"></i><span>{{'educationlang.hsc-year' | translate}}</span>
+                  <br><br>
+                  <i class="fa fa-university education-icons" placement="top" ngbTooltip="School Name" aria-hidden="true"></i><span>{{'educationlang.hsc-school' | translate}}</span>
+                  <br><br>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="service-box">
+               <div class="service-ico">
+                  <span class="ico-circle"><i class="ion-university"></i></span>
+               </div>
+               <div class="service-content">
+                  <h2 class="s-title"> {{'educationlang.be-title' | translate}}</h2>
+                  <i class="fa fa-percent education-icons" placement="top" ngbTooltip="Percentage" aria-hidden="true"></i><span>{{'educationlang.be-percenatge' | translate}}</span>
+                  <br><br>
+                  <i class="fa fa-calendar education-icons" placement="top" ngbTooltip="Year" aria-hidden="true"></i><span>{{'educationlang.be-year' | translate}}</span>
+                  <br><br>
+                  <i class="fa fa-university education-icons" placement="top" ngbTooltip="College Name" aria-hidden="true"></i><span>{{'educationlang.be-school' | translate}}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ </div>
+ <ngb-carousel interval="3000" [pauseOnHover]="false" [showNavigationArrows] = "false">
+ <ng-template ngbSlide *ngFor = 'let ed of experienceDetails'>
+   <div class="testimonials paralax-mf bg-image" [ngStyle]="{'background-image': 'url(' + expBackgroundImg + ')'}">
+      <div class="overlay-mf"></div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div id="testimonial-mf" class="owl-carousel owl-theme">
+                  <div class="testimonial-box">
+                     <div class="author-test">
+                        <img [src]="ed.CompanyImageUrl" alt="" class="rounded-circle b-shadow-a">
+                        <span class="author">{{ed.CompanyName}} - {{ed.TotalExperience}}</span>
+                     </div>
+                     <div class="content-test">
+                        <p class="author">{{ed.Role}}</p>
+                        <p class="description lead">{{ed.Year}}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ </ng-template>
+ </ngb-carousel>

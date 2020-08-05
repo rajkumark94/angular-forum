@@ -1,0 +1,91 @@
+{
+   "navlang":{
+      "home":"Home",
+      "technologies":"Technologies",
+      "projects":"Projetcs",
+      "certifications":"Certifications",
+      "contactus":"Mail Us",
+      "language":"日本語"
+   },
+   "aboutlang":{
+      "about":"About",
+      "viewcv":"View CV",
+      "visitorsinfo":"Visitors Information",
+      "visitorsname":"Your Good Name",
+      "visitorscompany":"Company Name",
+      "visitorsname-validation":"Name is required",
+      "visitorscompany-validation":"Company Name is required",
+      "visitorsmodelok":"OK",
+	  "visitorsmodelmessage":"Thank You!",
+	  "mobilebrowsermodeltitle":"Sorry !",
+	  "mobilebrowsermodelmessage":"This application is not compatible with mobile devices. Use the system or laptop. Apologize for the inconvenience."
+   },
+   "generallang":{
+      "speaking-tite":"Speaking",
+      "writing-tite":"Writing",
+      "reading-tite":"Reading"
+   },
+   "educationlang":{
+      "title":"Education",
+      "sub-title":"Academic Details.",
+      "sslc-title":"SSLC",
+      "sslc-percenatge":"85",
+      "sslc-year":"2009-2010",
+      "sslc-school":"Bharathi Higher Secondary School",
+      "hsc-title":"HSC",
+      "hsc-percenatge":"75",
+      "hsc-year":"2011-2012",
+      "hsc-school":"Bharathi Higher Secondary School",
+      "be-title":"B.E - Computer Science",
+      "be-percenatge":"65",
+      "be-year":"2012-2016",
+      "be-school":"Dhanalakshmi Srinivasan Engineering College"
+   },
+   "technologieslang":{
+      "title":"Known Technologies",
+      "all":"All Technologies",
+      "frameworks":"Frameworks",
+      "scripting":"Scripting",
+      "database":"Database",
+      "build":"Build",
+      "devops":"DevOps"
+   },
+   "projectlang":{
+      "title":"List of Worked Projects",
+      "project-title":"Project Title",
+      "startmonth":"Start Month",
+      "endmonth":"End Month",
+      "status":"Status",
+      "project-client":"Client :",
+      "projectstartmonth":"Project Start Month :",
+      "projectendmonth":"Project End Month :",
+      "projectrole":"Project Role :",
+      "projectdescription":"Project Description :",
+      "projecttechnologies":"Project Technologies :",
+      "projectstatus":"Project Status :"
+   },
+   "certificationlang":{
+      "title":"List of Certifications",
+      "certification-code":"Certification Code",
+      "certification-name":"Certification Name",
+      "certification-type":"Certification Type",
+      "certification-month":"Certification Month",
+      "certification-url":"Certification URL"
+   },
+   "mailuslang":{
+      "title":"Send Message Us",
+      "name":"Name",
+      "email":"Email ID",
+      "message":"Message",
+      "send":"Send Message",
+      "name-validation":"Name is required",
+      "email-validation-1":"Email is required",
+      "email-validation-2":"Email must be a valid email address",
+      "message-validation":"Message is required",
+      "model-title":"Confirmation",
+      "model-desc":"Thank you!. Your message has been sent. I'll contact you shortly."
+   },
+   "footerlang":{
+      "copyright":"All rights reserved Web Development by Raj Kumar"
+   }
+}

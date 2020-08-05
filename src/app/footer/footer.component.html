@@ -1,0 +1,20 @@
+<!--/ Section Contact-Footer Star /-->
+<div class="paralax-mf footer-paralax">
+  <div class="overlay-mf-footer"></div>
+    <footer>
+      <div class="container" *ngFor = 'let pd of personalDetails'>
+          <div class="col-sm-12">
+              <p class="copyright">© {{ copyright | date: "yyyy"}}, {{ 'footerlang.copyright' | translate }}</p>
+                <a href="mailto:{{pd.Email}}" target="_blank"><i class="fa fa-3x fa-envelope-square social"></i></a>
+                <span>&nbsp;&nbsp;</span>
+                <a href="{{pd.LinkedIn}}" target="_blank"><i class="fa fa-3x fa-linkedin-square social"></i></a>
+                <span>&nbsp;&nbsp;</span>
+                <a href="{{pd.FaceBook}}" target="_blank"><i class="fa fa-3x fa-facebook-square social"></i></a>
+                <span>&nbsp;&nbsp;</span>
+                <a href="{{pd.Twitter}}" target="_blank"><i class="fa fa-3x fa-twitter-square social"></i></a>
+                <span>&nbsp;&nbsp;</span>
+                <a href="{{pd.Instagram}}" target="_blank"><i class="fa fa-3x fa-instagram instagram social"></i></a>
+        </div>
+      </div>
+    </footer>
+</div>

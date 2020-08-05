@@ -1,0 +1,62 @@
+<div id="preloader"></div>
+<app-navigation></app-navigation>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+<a href="#" id="iconTop" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<a href="#" id="iconDown" class="back-to-top"><i class="fa fa-chevron-down"></i></a>
+
+<ng-template #visitorsModel let-modal>
+    <div class="modal-header">
+       <h4 class="modal-title project-model"><i class="fa fa-user" aria-hidden="true"></i> {{'aboutlang.visitorsinfo' | translate }}</h4>
+       <button *ngIf="!hiddenBodyFlag" type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+         <span aria-hidden="true">&times;</span>
+       </button>
+      </div>
+    <div *ngIf="!hiddenBodyFlag" class="modal-body">
+       <form [formGroup]="visitorsForm" (ngSubmit)="onSubmit()">
+       <div class="row">
+          <div class="col-md-12 mb-3">
+             <div class="form-group">
+                <label>{{'aboutlang.visitorsname' | translate }}</label><span class="required">*</span>
+                <input type="text" formControlName="visitorsname" ngbAutofocus class="form-control" [ngClass]="{ 'is-invalid': submitted && form.visitorsname.errors }" />
+                <div *ngIf="submitted && form.visitorsname.errors" class="invalid-feedback">
+                   <div *ngIf="form.visitorsname.errors.required">{{ 'aboutlang.visitorsname-validation' | translate }}</div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-12 mb-3">
+             <div class="form-group">
+                <label>{{'aboutlang.visitorscompany' | translate }}</label><span class="required">*</span>
+                <input type="text" formControlName="visitorscompany" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.visitorscompany.errors }"/>
+                <div *ngIf="submitted && form.visitorscompany.errors" class="invalid-feedback">
+                   <div *ngIf="form.visitorscompany.errors.required">{{ 'aboutlang.visitorscompany-validation' | translate }}</div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-12">
+             <button class="button button-a visitor-model-ok" [disabled]="buttonFlag">{{ 'aboutlang.visitorsmodelok' | translate }}</button>
+             <span *ngIf="buttonFlag" class="model-loader"><i class="fa fa-circle-o-notch model-loader"></i> Now loading</span>
+          </div>
+       </div>
+       </form>
+    </div>
+    <div *ngIf="hiddenBodyFlag" class="modal-body">
+       <div class="row">
+          <div class="visitors-confirmation"><span>{{ 'aboutlang.visitorsmodelmessage' | translate }}</span></div>
+       </div>
+    </div>
+    <div *ngIf="hiddenBodyFlag" class="modal-footer">
+       <button type="button"  class="btn btn-light visitor-close" (click)="modal.close('Close click');closeVisitorModel();">Close</button>
+    </div>
+  </ng-template>
+
+  <ng-template #mobileBrowserModel let-modal>
+   <div class="modal-header">
+      <h4 class="modal-title project-model"><i class="fa fa-frown-o" aria-hidden="true"></i> {{'aboutlang.mobilebrowsermodeltitle' | translate }}</h4>
+     </div>
+   <div class="modal-body">
+      <div class="row">
+         <div class="mobile-browser"><span>{{ 'aboutlang.mobilebrowsermodelmessage' | translate }}</span></div>
+      </div>
+   </div>
+ </ng-template>

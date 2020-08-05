@@ -1,0 +1,18 @@
+[
+    {
+   "BannerID": 1,
+   "BannerUrl": "assets/images/banner/img_1.jpg",
+   "BannerDesc": "Web Application Developer"
+    },
+    {
+        "BannerID": 2,
+        "BannerUrl": "assets/images/banner/img_2.jpg",
+        "BannerDesc": "Oracle Certified Associate, Java 8 Programmer"
+    },
+    {
+        "BannerID": 3,
+        "BannerUrl": "assets/images/banner/img_3.jpg",
+        "BannerDesc": "Japanese Language Proficiency Test N5 Certified"
+    }
+]
+
