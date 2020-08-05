@@ -1,0 +1,23 @@
+[
+   {
+      "Title":"タミル語",
+      "Level":"上級レ",
+      "SpeakingPercentage":"100",
+      "WritingPercentage":"100",
+      "ReadingPercentage":"100"
+   },
+   {
+      "Title":"英語",
+      "Level":"事前",
+      "SpeakingPercentage":"60",
+      "WritingPercentage":"80",
+      "ReadingPercentage":"60"
+   },
+   {
+      "Title":"日本語",
+      "Level":"初級",
+      "SpeakingPercentage":"40",
+      "WritingPercentage":"30",
+      "ReadingPercentage":"30"
+   }
+]

@@ -1,0 +1,20 @@
+[
+   {
+      "CertificationId":1,
+      "CertificationCode":"1Z0-808",
+      "CertificationName":"Oracle Certified Associate, Java 8 Programmer",
+      "CertificationType":"テクニカル",
+      "CertificationMonth":"2020年2月",
+      "CertificationUrl":"https://www.youracclaim.com/badges/a2cd6294-5432-434d-b6f1-a3d507fb1c24/public_url",
+	  "CertificationImageUrl":"assets/images/certification/img_1.jpg"
+   },
+   {
+      "CertificationId":2,
+      "CertificationCode":"N5",
+      "CertificationName":"日本語能力試験N5認定",
+      "CertificationType":"言語",
+      "CertificationMonth":"2019年7月",
+      "CertificationUrl":"https://drive.google.com/file/d/1taXGa_SN0P5_RTlT1e9_wGlV__PEq391/view?usp=sharing",
+	  "CertificationImageUrl":"assets/images/certification/img_2.jpg"
+   }
+]

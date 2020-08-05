@@ -1,0 +1,74 @@
+[
+   {
+      "ProjectID":1,
+      "ProjectTitle":"Weibull Analysis Function",
+      "ProjectDesc":"This system application is used to track details of automobile warranty details. Based on the user’s input conditions, get the values from database and convert these values to chart plots using Microsoft R services and these plots are displayed in the chart graph. This application is developed with 10+ features. Some of them are, divide the chart line, merge the chart line, overlap the chart line, file upload, file download, data insert and update.",
+      "ProjectStartMonth":"May 2018",
+      "ProjectEndMonth":"July 2020",
+      "ProjectClient":"Nissan Motor Corporation, Japan",
+      "ProjectRole":"Developer",
+      "ProjectTechnologies":"Java, Spring Boot, Hana, Thymeleaf, Chart JS, Java Script",
+      "ProjectImageUrl":"assets/images/projects/img_5.jpg",
+      "ProjectStatus":"Completed"
+   },
+   {
+      "ProjectID":2,
+      "ProjectTitle":"Onsite Resource Management",
+      "ProjectDesc":"This system application is used for tracking onsite employees. The modules are leave,Travel and resource request. Employees Request to their respective managers in need of any support in their onsite. Manager approve leave request and travel request and resource request.",
+      "ProjectStartMonth":"Feb 2018",
+      "ProjectEndMonth":"Apr 2018",
+      "ProjectClient":"SRM Technologies Private Limited, Chennai",
+      "ProjectRole":"Developer",
+      "ProjectTechnologies":"Java, Struts2, Hibernate, MySQL, HTML, JQuery, JavaScript",
+      "ProjectImageUrl":"assets/images/projects/img_4.jpg",
+      "ProjectStatus":"Completed"
+   },
+   {
+      "ProjectID":3,
+      "ProjectTitle":"FIP Auto Call System",
+      "ProjectDesc":"This system purpose is to auto call the respective System engineers whenever an Incident/Error alert generated in the SaaS System (credit card point system). The modules are user, guest, group, group member management, notification group, schedule management and message policy. The users will come under tenant. Each tenant having separate parameter settings. The main purpose of this project is to setup the user to attend the calls for during error.",
+      "ProjectStartMonth":"June 2017",
+      "ProjectEndMonth":"Jan 2018",
+      "ProjectClient":"Fujitsu, Japan",
+      "ProjectRole":"Developer",
+      "ProjectTechnologies":"Java, Spring, Doma, PostgreSQL, HTML, JSP, JQuery, JavaScript",
+      "ProjectImageUrl":"assets/images/projects/img_3.jpg",
+      "ProjectStatus":"Completed"
+   },
+   {
+      "ProjectID":4,
+      "ProjectTitle":"CAE – Portal",
+      "ProjectDesc":"Contractor management, User management and server management can be done in AWS through CAE portal. The AMI are already created in amazon and it is available in portal. So, this application creates the server using existing image. The server gets stopped based on the cost limit setting, if usage cost exceeds the cost limit then all the server will be stopped immediately through batch. Billing will be generated for each server in daily basis.",
+      "ProjectStartMonth":"Feb 2017",
+      "ProjectEndMonth":"May 2017",
+      "ProjectClient":"CYBERNET, Japan",
+      "ProjectRole":"Developer",
+      "ProjectTechnologies":"Java, Struts2, Hibernate, PostgreSQL, HTML, JSP, JQuery, JavaScript",
+      "ProjectImageUrl":"assets/images/projects/img_2.jpg",
+      "ProjectStatus":"Completed"
+   },
+   {
+      "ProjectID":5,
+      "ProjectTitle":"Assessment for Learning",
+      "ProjectDesc":"This system application is used to conduct exams online and also maintain the Students details. Students are group based on the marks obtained from the exam. Training will be conducted based on the group. The modules are student master, Question preparation, Exam plan and execution and training.",
+      "ProjectStartMonth":"Oct 2016",
+      "ProjectEndMonth":"Jan 2017",
+      "ProjectClient":"SRM University, Chennai",
+      "ProjectRole":"Developer",
+      "ProjectTechnologies":"Java, Servlets, JDBC, MySQL, HTML, JSP, JavaScript",
+      "ProjectImageUrl":"assets/images/projects/img_1.jpg",
+      "ProjectStatus":"Completed"
+   },
+   {
+      "ProjectID":6,
+      "ProjectTitle":"Business Blog",
+      "ProjectDesc":"This POC is developed to implement the Angular technology in business blog. In this POC, I had implemented the Routing concept, Ng-Bootstrap for bootstrapping, Reactive Form Module is used for forms, for translator ngx-translate module is used and HttpClient Service call for management related screens.",
+      "ProjectStartMonth":"-",
+      "ProjectEndMonth":"-",
+      "ProjectClient":"Business Blog",
+      "ProjectRole":"Full Stack Developer",
+      "ProjectTechnologies":"Angular, HTML, Bootstrap 4, JQuery",
+      "ProjectImageUrl":"assets/images/projects/img_0.jpg",
+      "ProjectStatus":"Completed"
+   }
+]

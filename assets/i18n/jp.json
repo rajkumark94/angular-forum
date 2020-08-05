@@ -1,0 +1,89 @@
+{
+   "navlang":{
+      "home":"ホーム",
+      "technologies":"テクノロジー",
+      "projects":"プロジェクト",
+      "certifications":"認定",
+      "contactus":"メール",
+      "language":"ENGLISH"
+   },
+   "aboutlang":{
+      "about":"就いて",
+      "viewcv":"履歴書を見る",
+      "visitorsinfo":"訪問者情報",
+      "visitorsname":"あなたの良い名前",
+      "visitorscompany":"会社名",
+      "visitorsname-validation":"名前は必須です",
+      "visitorscompany-validation":"会社名は必須です",
+      "visitorsmodelok":"OK",
+	  "visitorsmodelmessage":"ありがとうございました！"
+   },
+   "generallang":{
+      "speaking-tite":"話す",
+      "writing-tite":"筆記",
+      "reading-tite":"読解"
+   },
+   "educationlang":{
+      "title":"教育",
+      "sub-title":"学歴.",
+      "sslc-title":"SSLC",
+      "sslc-percenatge":"85",
+      "sslc-year":"2009-2010",
+      "sslc-school":"バラティ高等学校",
+      "hsc-title":"HSC",
+      "hsc-percenatge":"75",
+      "hsc-year":"2011-2012",
+      "hsc-school":"バラティ高等学校",
+      "be-title":"B.E - コンピュータサイエンス",
+      "be-percenatge":"65",
+      "be-year":"2012-2016",
+      "be-school":"ダナラクシュミスリニバサンエンジニアリングカレッジ"
+   },
+   "technologieslang":{
+      "title":"既知のテクノロジー",
+      "all":"すべてのテクノロジー",
+      "frameworks":"フレームワーク",
+      "scripting":"スクリプティング",
+      "database":"データベース",
+      "build":"ビルド",
+      "devops":"DevOps"
+   },
+   "projectlang":{
+      "title":"作業済みプロジェクトのリスト",
+      "project-title":"プロジェクトの題名",
+      "startmonth":"開始月",
+      "endmonth":"終了月",
+      "status":"状態",
+      "project-client":"顧客 :",
+      "projectstartmonth":"プロジェクト開始月 :",
+      "projectendmonth":"プロジェクト終了月 :",
+      "projectrole":"プロジェクトの役割 :",
+      "projectdescription":"プロジェクトの説明 :",
+      "projecttechnologies":"プロジェクトのテクノロジー :",
+      "projectstatus":"プロジェクトの状態 :"
+   },
+   "certificationlang":{
+      "title":"認証のリスト",
+      "certification-code":"認証のコード",
+      "certification-name":"認証の名",
+      "certification-type":"認証のタイプ",
+      "certification-month":"認証の月",
+      "certification-url":"認証のURL"
+   },
+   "mailuslang":{
+      "title":"メッセージを送る",
+      "name":"名前",
+      "email":"メールアドレス",
+      "message":"メッセージ",
+      "send":"送る",
+      "name-validation":"名前は必須です",
+      "email-validation-1":"メールは必須です",
+      "email-validation-2":"メールアドレスは有効なメールアドレスである必要があります",
+      "message-validation":"メッセージが必要です",
+      "model-title":"確認",
+      "model-desc":"ありがとうございました。 メッセージが送信されました。 すぐにご連絡します."
+   },
+   "footerlang":{
+      "copyright":"All rights reserved Web Development by ラジュクマール"
+   }
+}
